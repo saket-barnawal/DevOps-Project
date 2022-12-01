@@ -1,0 +1,21 @@
+// Create Security groups for resources in VPC (Control Traffic with Security group)
+
+  Security group is a virtual firewall for your instance to control inbound and outbound traffic.
+
+i)Select a appropriate region.
+
+ii)Create Security group for Application Load Balancer(ALB).
+ -add http -80
+ -add https - 443
+
+iii)Create Security group for Web Servers.
+  -http -80 through ALB Security group
+  -https -443 through ALB Security group
+
+iv)Create Security group for Database.
+ -mysql/aurora -3306 through web server security group
+
+v)Create Security group for Elastic File System.
+ -NFS -2049 through web server security group
+
+vi)Edit inbound rules for EFS security group.
