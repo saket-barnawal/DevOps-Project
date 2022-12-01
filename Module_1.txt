@@ -1,0 +1,40 @@
+// Create a VPC with Public and Private Subnets
+
+i) Select the region where you want to host your website.
+
+ii) Create a VPC - 10.0.0.0/16(IPv4)
+
+iii)Create Internet Gateway and Attach that Gateway to VPC.
+
+iv)Create two public subnets in two Availability Zones.
+   Public Subnet 1 - us-east-1a -10.0.0.0/24(Ipv4 CIDR block)
+   Public Subnet 2 - us-east-1b -10.0.1.0/24(IPv4 CIDR block)
+
+v) Modify auto-assign IP settings.
+
+vi)Create a public route table 
+
+vii) Create a public route
+     -Edit route 
+     -Add destination 0.0.0.0/0 with internet gateway 
+     -save routes
+
+  Diff between public subnet and private subnet is --
+  -> A public subnet has an internet gateway attach to it route table.
+
+viii)Associate public route table to public subnets 1 and 2
+  
+ix)Create 4 private Subnets (2 in each Availability Zone)
+   -Private Subnet 1 | App Tier - 10.0.2.0/24 - us-east-1a
+   -Private Subnet 2 | App Tier - 10.0.3.0/24 - us-east-1b
+   -Private Subnet 3 | Database Tier - 10.0.4.0/24 - us-east-1a
+   -Private Subnet 4 | Database Tier - 10.0.5.0/24 - us-east-1b
+ 
+x)Create a route table for private subnet
+  -Create private route table 1
+  -Associate private route table 1 to private subnet 1 and 3
+
+  -Create private route table 2
+  -Associate private route table 2 to private subnet 2 and 4
+
+
