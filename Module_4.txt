@@ -1,0 +1,10 @@
+// Create a MYSQL Database - RDS
+
+i)Select an appropriate Region
+
+ii)Create DB Subnet group
+
+iii)Click on create database 
+    -Select mysql engine
+
+iv)save your credentials.
