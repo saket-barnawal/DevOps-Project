@@ -1,0 +1,7 @@
+//  Create an EFS
+
+i)Create file sytem
+
+ii)select the customize 
+
+iii)create
