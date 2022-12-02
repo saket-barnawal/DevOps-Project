@@ -1,0 +1,13 @@
+// Mount nfs4 Failed to Resolve Server
+
+i)Go to EC2 services
+
+ii)select the running instances
+
+iii)check box the insatance and check the verify public dns ipv4
+
+iv)select vpc - your vpc - actions - edit DNS hostnames - enable it 
+
+v)now ssh your instances and mount with EFS.
+
+
